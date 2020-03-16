@@ -13,7 +13,6 @@ import { GenderChangeComponent } from '../gender-change/gender-change.component'
 })
 export class AgGridExampleComponent implements OnInit {
 
-
   synth:any;
   notes:string[] = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
   octives:number[] = [1,2,3,4,5,6];
@@ -23,7 +22,7 @@ export class AgGridExampleComponent implements OnInit {
   public columnDefs = [
     {headerName: 'Make', field: 'make' },
     {headerName: 'Model', field: 'model' },
-    {headerName: 'Price', field: 'price'},
+    {headerName: 'Price', field: 'price', filter: "agTextColumnFilter"},
     {headerName: 'Gender', field: 'gender', editable: true, cellEditor: 'genderChangeComponent' }
   ];
 
